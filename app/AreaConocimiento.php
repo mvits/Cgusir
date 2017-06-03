@@ -13,7 +13,7 @@ class AreaConocimiento extends Model
     public function libros()
     {
 
-        return $this->belongsToMany('App\Libro');
+        return $this->belongsToMany('App\Libro')->withTimestamps();
 
     }
 }

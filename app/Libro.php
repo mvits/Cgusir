@@ -12,16 +12,16 @@ class Libro extends Model
 
     public function autores()
     {
-        return $this->belongsToMany('App\Autor');
+        return $this->belongsToMany('App\Autor')->withTimestamps();
     }
 
     public function areas()
     {
-        return $this->belongsToMany('App\AreaConocimiento');
+        return $this->belongsToMany('App\AreaConocimiento')->withTimestamps();
     }
     public function usuarios()
     {
-        return $this->belongsToMany('App\Usuario');
+        return $this->belongsToMany('App\Usuario')->withTimestamps();
     }
 
 }
