@@ -20,6 +20,7 @@ class AddLibrosTable extends Migration
             $table->enum('tipo', ['libro', 'fotocopia']);
             $table->string('isbn');
             $table->integer('numero_edicion');
+            $table->enum('estado_prestamo', ['SI', 'NO'])->default('NO');
             $table->timestamps();
         });
 
@@ -45,6 +46,19 @@ class AddLibrosTable extends Migration
             $table->timestamps();
         });
 
+        Schema::create('libro_usuario', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('usuario_id')->unsigned();
+            $table->integer('libro_id')->unsigned();
+            $table->date('fecha_entrega');
+            $table->boolean('estado_registro')->default('TRUE');
+
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('libro_id')->references('id')->on('libros');
+
+            $table->timestamps();
+        });
+
     }
 
     /**
@@ -56,6 +70,7 @@ class AddLibrosTable extends Migration
     {
         Schema::dropIfExists('libro_autor');
         Schema::dropIfExists('libro_area');
+        Schema::dropIfExists('libro_usuario');
         Schema::dropIfExists('libros');
     }
 }
