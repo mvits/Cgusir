@@ -30,7 +30,7 @@
     <nav id="sidebar-wrapper">
         <a id="menu-close" href="#" class="close-btn toggle"><i class="ion-ios-close-empty"></i></a>
         <ul class="sidebar-nav">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home">Inicio</a></li>
             @yield('menuPrincipal')
         </ul>
     </nav>

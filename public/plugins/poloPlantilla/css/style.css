@@ -167,12 +167,12 @@ a:hover {
     height: 100%;
     margin-right: -260px;
     overflow-y: auto;
-    background: #00967f;
+    background: #000000;
     z-index: 99999999;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
-    -ms-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s
+;    -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
@@ -285,13 +285,13 @@ a:hover {
     top:0; 
     left:0;
     width: 100%; 
-    background-color: #00967f;
+    background-color: #000000;
     padding: 0px;
 }
 .logo {
     font-family: 'caviar_dreams';
     color: #fff;
-    font-size: 2.5em;
+    font-size: 2.0em;
     line-height: 1.6;
 }
 #logo_menu {
@@ -321,7 +321,7 @@ a:hover {
 /////////////////////////////////////////////////////////////////////*/
 
 #banner {
-    background: url(../img/bg.jpg);
+    background: url(../../../images/MapaSombrasBogota3.png);
     background-size: cover;
     padding-top: 80px;
     background-attachment: fixed;
@@ -739,7 +739,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 
 
 #footer {
-    background: #00967f;
+    background: #000000;
     padding: 20px 0px 22px 0px;
 }
 .footer-logo {
