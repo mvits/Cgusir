@@ -56,8 +56,9 @@
             <section class="row">
                 <div class="col-md-6">
                     <div class="headings">
-                        <h1 class="wow animated fadeInDown">It's Amazing</h1>
-                        <p class="wow animated fadeInLeft">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <h1 class="wow animated fadeInDown">@yield('tituloSeccionInicial')</h1>
+                        <p class="wow animated fadeInLeft">@yield('contenidoSeccionInicial')</p>
+                        <!-- 
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-5">
                                 <div>
@@ -70,11 +71,12 @@
                                 </div>
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
                 <div class="col-md-6 hidden-xs hidden-sm">
                     <div class="hand-container">
-                    <img class="iphone-hand img_res wow animated bounceInUp" data-wow-duration="1.2s" src="assets/img/iphone_hand.png"></img>
+                    <img class="iphone-hand img_res wow animated bounceInUp" data-wow-duration="1.2s" src="{{ asset('images/visionCatastrallogo.png') }}"></img>
                     <div class="clearfix"></div>
                     </div>
                 </div>
@@ -83,7 +85,7 @@
     </section>
 
     <!-- ****************************** Features Section ************************** -->
-
+    <!-- Tecnologias
     <section id="features" class="block">
         <section class="container">
             <section class="row">
@@ -143,9 +145,10 @@
             <div class="clearfix"></div>
         </section>
     </section>
+    -->
 
     <!-- ****************************** Gallery Section ************************** -->
-
+    <!--
     <section id="gallery" class="block">
         <section class="container">
             <section class="row">
@@ -178,10 +181,10 @@
                 </div>
             </section>
         </section>
-    </section>
+    </section> -->
 
     <!-- ****************************** Team Section ************************** -->
-
+    <!--
     <section id="team" class="block">
         <section class="container">
             <section class="row">
@@ -257,29 +260,19 @@
             </section>
         </section>
     </section>
-
+    -->
     <!-- ****************************** Testimonial ************************** -->
 
-    <section id="testimonial" class="block">
-        <section class="container">
-            <section class="row">
-                <div class="title-box"><h1 class="block-title wow animated rollIn">
-                <span class="bb-top-left"></span>
-                <span class="bb-bottom-left"></span>
-                Precious Reviews
-                <span class="bb-top-right"></span>
-                <span class="bb-bottom-right"></span>
-                </h1></div>
-            </section>
-        </section>
+    <section id="contenido" class="block">
+
         <section class="container">
             <section class="row">
                 <section class="col-xs-12">
                     <div id="review" class="owl-carousel owl-theme">
                         <div class="item">
                             <div class="row">
-                                <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="client-pic"><img class="img_res" src="assets/img/client-one.png"></div>
+                                <!--<div class="col-sm-4 col-sm-offset-1">
+                                   <div class="client-pic"><img class="img_res" src="assets/img/client-one.png"></div>
                                     <p class="review-star">
                                         <i class="ion-ios-star"></i>
                                         <i class="ion-ios-star"></i>
@@ -287,22 +280,21 @@
                                         <i class="ion-ios-star"></i>
                                         <i class="ion-ios-star-outline"></i>
                                     </p>
-                                </div>
-                                <div class="col-sm-6">
-                                    <p class="review-desc">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                </div>-->
+                                <div class="col-sm-12">
+                                    <p class="titulo-item">
+                                        @yield('mision')
                                     </p>
-                                    <p class="client-name">
-                                        Shahjahan Jewel
+                                    <br><br><br>
+                                    <p class="review-desc">
+                                       @yield('contenidoMision')
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="row">
-                                <div class="col-sm-4 col-sm-offset-1">
+                                <!--<div class="col-sm-4 col-sm-offset-1">
                                     <div class="client-pic"><img class="img_res" src="assets/img/client-one.png"></div>
                                     <p class="review-star">
                                         <i class="ion-ios-star"></i>
@@ -311,22 +303,21 @@
                                         <i class="ion-ios-star"></i>
                                         <i class="ion-ios-star-outline"></i>
                                     </p>
-                                </div>
-                                <div class="col-sm-6">
-                                    <p class="review-desc">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                </div>-->
+                                <div class="col-sm-12">
+                                    <p class="titulo-item">
+                                        @yield('vision')
                                     </p>
-                                    <p class="client-name">
-                                        Shahjahan Jewel
+                                    <br><br><br>
+                                    <p class="review-desc">
+                                        @yield('contenidoVision')
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="row">
-                                <div class="col-sm-4 col-sm-offset-1">
+                                <!--<div class="col-sm-4 col-sm-offset-1">
                                     <div class="client-pic"><img class="img_res" src="assets/img/client-one.png"></div>
                                     <p class="review-star">
                                         <i class="ion-ios-star"></i>
@@ -335,39 +326,14 @@
                                         <i class="ion-ios-star"></i>
                                         <i class="ion-ios-star-outline"></i>
                                     </p>
-                                </div>
-                                <div class="col-sm-6">
+                                </div>-->
+                                <div class="col-sm-12">
+                                    <p class="titulo-item">
+                                        @yield('historia')
+                                    </p>
+                                    <br><br><br>
                                     <p class="review-desc">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    </p>
-                                    <p class="client-name">
-                                        Shahjahan Jewel
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="client-pic"><img class="img_res" src="assets/img/client-one.png"></div>
-                                    <p class="review-star">
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star"></i>
-                                        <i class="ion-ios-star-outline"></i>
-                                    </p>
-                                </div>
-                                <div class="col-sm-6">
-                                    <p class="review-desc">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    </p>
-                                    <p class="client-name">
-                                        Shahjahan Jewel
+                                        @yield('contenidoHistoria')
                                     </p>
                                 </div>
                             </div>
@@ -379,7 +345,7 @@
     </section>
 
     <!-- ****************************** Subscribe Section ************************** -->
-
+    <!--
     <section id="subscribe">
         <section class="container">
             <section class="row">
@@ -413,7 +379,7 @@
                 </div>
             </section>
         </section>
-    </section>
+    </section>-->
 
     <!-- ****************************** Contact Section ************************** -->
 
@@ -423,7 +389,7 @@
                     <div class="title-box"><h1 class="block-title wow animated rollIn">
                     <span class="bb-top-left"></span>
                     <span class="bb-bottom-left"></span>
-                    Contact Us
+                    @yield('titulosContato')
                     <span class="bb-top-right"></span>
                     <span class="bb-bottom-right"></span>
                     </h1></div>

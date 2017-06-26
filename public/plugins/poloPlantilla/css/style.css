@@ -81,7 +81,7 @@ a:hover {
 
 .img_res{
     display: block;
-    width: 100%;
+    /*width: 100%;*/
     height: auto;
     max-width: 100%;
 }
@@ -321,7 +321,7 @@ a:hover {
 /////////////////////////////////////////////////////////////////////*/
 
 #banner {
-    background: url(../../../images/MapaSombrasBogota3.png);
+    background: url(../../../images/MapaSombrasBogota4.png);
     background-size: cover;
     padding-top: 80px;
     background-attachment: fixed;
@@ -522,7 +522,7 @@ a:hover {
 /////////////////////////////////////////////////////////////////////*/
 
 
-#testimonial {
+#contenido {
     background: url(../img/testi-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -558,8 +558,8 @@ a:hover {
 #testimonial .block-title span {
     border-color: #fff;
 }
-p.client-name {
-    float: right;
+p.titulo-item {
+    float: left;
     font-size: 30px;
     color: #fff;
     display: inline-block;
