@@ -76,7 +76,7 @@
                 </div>
                 <div class="col-md-6 hidden-xs hidden-sm">
                     <div class="hand-container">
-                    <img class="iphone-hand img_res wow animated bounceInUp" data-wow-duration="1.2s" src="{{ asset('images/visionCatastrallogo.png') }}"></img>
+                    <img class="iphone-hand img_res wow animated bounceInUp" data-wow-duration="1.2s" src="{{ asset('images/geoideGeneral.png') }}"></img>
                     <div class="clearfix"></div>
                     </div>
                 </div>
@@ -399,10 +399,10 @@
                 <div class="container">
                     <div class="col-sm-12">
                         <ul class="address-list">
-                            <li><i class="ion-ios-location" style="background-color: rgb(255, 102, 0);"></i> <span>1537 Flint Street <br>Tumon, MP 96911</span></li>
-                            <li><i class="ion-ios-telephone" style="background-color: #63cfea;"></i> <span>670-898-2847 </span></li>
-                            <li><i class="ion-email" style="background-color: #6ecba9;"></i> <span>info@domain.com</span></li>
-                            <li><i class="ion-earth" style="background-color: #ff6969;"></i> <span>www.themewagon.com</span></li>
+                            <li><i class="ion-ios-location" style="background-color: rgb(28, 33, 45);"></i> <span>@yield('direccionVision')</span></li>
+                            <!--<li><i class="ion-ios-telephone" style="background-color: #63cfea;"></i> <span>670-898-2847 </span></li>-->
+                            <li><i class="ion-email" style="background-color: #dd5044;"></i> <span>@yield('correoVision')</span></li>
+                            <li><i class="ion-earth" style="background-color: #3b5998;"></i> <span>@yield('linkVision')</span></li>
                         </ul>
                     </div>
                 </div>
@@ -448,13 +448,12 @@
             <section class="container">
                 <section class="row">
                     <div class="col-sm-6">
-                        <span>Theme By</span>
                         <h1 class="footer-logo">
-                            <a href="https://themewagon.com/">ThemeWagon</a>
+                        @yield('descripcionPlantilla')
                         </h1>
                     </div>
                     <div class="col-sm-6">
-                        <p class="copyright">All &copy; Copyright Reserved 2014</p>
+                        <p class="copyright">@yield('logoVision')</p>
                     </div>
                 </section>
             </section>

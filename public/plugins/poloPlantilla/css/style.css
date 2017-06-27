@@ -81,9 +81,11 @@ a:hover {
 
 .img_res{
     display: block;
-    /*width: 100%;*/
+    width: 70%;
     height: auto;
     max-width: 100%;
+    text-align: center;
+    vertical-align: middle;
 }
 .block-title {
     font-weight: 300;
@@ -523,7 +525,7 @@ a:hover {
 
 
 #contenido {
-    background: url(../img/testi-bg.png);
+    background: url(../../../images/paronamicaBogota.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
