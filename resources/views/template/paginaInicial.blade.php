@@ -52,7 +52,7 @@
 
     <section id="banner" >
         <section class="container">
-            <a class="slidedown wow animated zoomIn" data-wow-delay="2s" href="#features"><i class="ion-ios-download-outline"></i></a>
+            <a class="slidedown wow animated zoomIn" data-wow-delay="2s" href="#contenido"><i class="ion-ios-download-outline"></i></a>
             <section class="row">
                 <div class="col-md-6">
                     <div class="headings">
@@ -76,7 +76,7 @@
                 </div>
                 <div class="col-md-6 hidden-xs hidden-sm">
                     <div class="hand-container">
-                    <img class="iphone-hand img_res wow animated bounceInUp" data-wow-duration="1.2s" src="{{ asset('images/geoideGeneral.png') }}"></img>
+                    <!--<img class="iphone-hand img_res wow animated bounceInUp" data-wow-duration="1.2s" src="{{ asset('images/geoideGeneral2.png') }}"></img>-->
                     <div class="clearfix"></div>
                     </div>
                 </div>
