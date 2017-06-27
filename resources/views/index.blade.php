@@ -65,7 +65,36 @@ Visión catastral comienza sus labores en la década de los 80 cuando los estudi
 Contáctenos
 @endsection
 
+@section('direccionVision')
+Cra. 7 #40B - 53, Bogotá, Segundo Piso Edificio Copete. 
+@endsection
+
+@section('correoVision')
+stiv.zeuq@gmail.com
+@endsection
+
+@section('linkVision')
+<a target="_blank" href="https://www.facebook.com/vision.getvicat">Facebook: vision.getvicat</a>
+@endsection
 <!-- *** -->
+
+<!-- Footer -->
+
+@section('descripcionPlantilla')
+&copy; 2017 Visión Catastral
+<br>Universidad Distrital Francisco José de Caldas
+<br>Basado en Diseño --------
+@endsection
+
+
+@section('logos')
+<img data-wow-duration="1.2s" src="{{ asset('images/visionCatastrallogo.png') }}"></img>
+@endsection
+
+<!-- *** -->
+
+
+
 
 
 

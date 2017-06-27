@@ -453,7 +453,7 @@
                         </h1>
                     </div>
                     <div class="col-sm-6">
-                        <p class="copyright">@yield('logoVision')</p>
+                        <p class="copyright">@yield('logos')</p>
                     </div>
                 </section>
             </section>
