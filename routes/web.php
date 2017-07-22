@@ -16,14 +16,9 @@ Route::get('/', function () {
 });
 
 // Rutas Bilblioteca
-/*
-Route::group(['prefix' => 'biblioteca'], function () {
 
-Route::get('autores/{nombre?}', function ($nombre = 'stiv') {
+Route::group(['prefix' => 'biblioteca/admin'], function () {
 
-var_dump($nombre);
+    Route::resource('usuarios', 'UsuariosController');
 
 });
-
-});
- */

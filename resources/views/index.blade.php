@@ -66,7 +66,7 @@ Contáctenos
 @endsection
 
 @section('direccionVision')
-Cra. 7 #40B - 53, Bogotá, Segundo Piso Edificio Copete. 
+Cra. 7 #40B - 53, Bogotá,Universidad Distrital Francisco José de Caldas, Segundo Piso Edificio Copete. 
 @endsection
 
 @section('correoVision')
