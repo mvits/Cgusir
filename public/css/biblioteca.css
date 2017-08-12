@@ -1,0 +1,68 @@
+* {
+	margin:0;
+	padding:0;
+}
+ 
+body {
+
+	background-image: url('../images/fractal1-2.jpg');
+}
+ 
+header {
+	width:100%;
+}
+ 
+
+#cabecera{
+  width: 80%;
+  margin: 20px auto;
+}
+
+#contenido{
+  width: 80%;
+  margin: 0px auto;
+  border-color: #e7e7e7;
+  background: rgba(248, 248, 248, 0.91);
+
+
+}
+
+ 
+@media screen and (max-width:1000px ) {
+
+	#cabecera{
+	  width: 95%;
+	  margin: 20px auto;
+	}
+
+	#contenido{
+	  width: 95%;
+	  margin: 0px auto;
+	  background: rgba(183, 183, 183, 0.72);
+	}
+		
+}
+
+/*             Estilos Menu             */
+.navbar-nav.sm-collapsible .caret, .navbar-nav.sm-collapsible ul .caret {
+    position: absolute;
+    right: 0;
+    margin: -3px 15px 0 0;
+    padding: 0;
+    width: 32px;
+    height: 26px;
+    line-height: 24px;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+}
+.navbar-nav.sm-collapsible .caret:before {
+    content: '+';
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.navbar-nav.sm-collapsible a.has-submenu {
+    padding-right: 50px;
+}
+/*----------------------------------------*/
