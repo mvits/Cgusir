@@ -10,65 +10,80 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/poloPlantilla/css/ionicons.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/poloPlantilla/css/owl.carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/poloPlantilla/css/owl.theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/poloPlantilla/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/poloPlantilla/css/style.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/biblioteca.css') }}">
     <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700|Oxygen:400,300,700' rel='stylesheet'>
 
 </head>
 <body>
 
-    <!-- ****************************** Preloader ************************** -->
+    <section id='cabecera' >
+        <!-- Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Biblioteca Visión Catastral</a>
+          </div>
+          <div class="navbar-collapse collapse">
 
-    <div id="preloader"></div>
+            <!-- Left nav -->
+            <ul class="nav navbar-nav">
+              <li><a href="#">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</span></a></li>
+                </ul>
+              </li>
+            </ul>
 
-    <!-- ****************************** Sidebar ************************** -->
-    <nav id="sidebar-wrapper">
-        <a id="menu-close" href="#" class="close-btn toggle"><i class="ion-ios-close-empty"></i></a>
-        <ul class="sidebar-nav">
-            <li><a href="#home">Inicio</a></li>
-            @yield('menuPrincipal')
-        </ul>
-    </nav>
+            <!-- Right nav -->
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">A sub menu <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="disabled"><a class="disabled" href="#">Disabled item</a></li>
+                      <li><a href="#">One more link</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">A separated link</a></li>
+                </ul>
+              </li>
+            </ul>
 
-
-    <!-- ****************************** Header ************************** -->
-
-    <header class="fixed" id="header">
-        <section class="container">
-            <section class="row" id="logo_menu">
-                <section class="col-xs-8"><a class="logo" href="">@yield('nombreGrupo')</a></section>
-                <section class="col-xs-4"><a id="menu-toggle" href="#" class="toggle wow rotateIn" data-wow-delay="1s"><i class="ion-navicon"></i></a></section>
-            </section>
-        </section>
-    </header>
-
-    <section id="contenido">
-            
-                <div class="col-md-12">
-                    <div class="headings">
-                        <h1>asdahksbuhbadb</h1>
-                        <p>asdamdomoasmdom</p>
-                    </div>
-                </div>
-
+          </div><!--/.nav-collapse -->
+        </div>
+    </section>
+    <section id='contenido' >
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">Panel content</div>
+        </div>
     </section>
 
-
-    
-
-
-    <!-- All the scripts -->
-
-    <script src="{{ asset('plugins/poloPlantilla/js/jquery-2.1.3.min.js') }}"></script>
+    <script src="{{ asset('plugins/jquery/js/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('plugins/poloPlantilla/js/wow.min.js') }}"></script>
-    <script src="{{ asset('plugins/poloPlantilla/js/owl.carousel.js') }}"></script>
-    <script src="{{ asset('plugins/poloPlantilla/js/script.js') }}"></script>
-
+    <script src="{{ asset('plugins/smartmenus/jquery.smartmenus.min.js') }}"></script>
+    <script src="{{ asset('plugins/smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js') }}"></script>
 </body>
 </html>
