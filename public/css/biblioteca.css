@@ -1,3 +1,4 @@
+/*             Estilos Generales                   */
 * {
 	margin:0;
 	padding:0;
@@ -11,8 +12,35 @@ body {
 header {
 	width:100%;
 }
- 
+/*----------------------------------------*/
 
+/*             Estilos Menu             */
+.navbar-nav.sm-collapsible .caret, .navbar-nav.sm-collapsible ul .caret {
+    position: absolute;
+    right: 0;
+    margin: -3px 15px 0 0;
+    padding: 0;
+    width: 32px;
+    height: 26px;
+    line-height: 24px;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+}
+.navbar-nav.sm-collapsible .caret:before {
+    content: '+';
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.navbar-nav.sm-collapsible a.has-submenu {
+    padding-right: 50px;
+}
+/*----------------------------------------*/
+
+
+ 
+/*             Estilos Secciónes Pagina             */
 #cabecera{
   width: 80%;
   margin: 20px auto;
@@ -43,26 +71,34 @@ header {
 		
 }
 
-/*             Estilos Menu             */
-.navbar-nav.sm-collapsible .caret, .navbar-nav.sm-collapsible ul .caret {
-    position: absolute;
-    right: 0;
-    margin: -3px 15px 0 0;
-    padding: 0;
-    width: 32px;
-    height: 26px;
-    line-height: 24px;
-    text-align: center;
-    border-width: 1px;
-    border-style: solid;
-}
-.navbar-nav.sm-collapsible .caret:before {
-    content: '+';
-    font-family: monospace;
-    font-weight: bold;
+/*----------------------------------------*/
+
+
+
+/*             Estilos Secciónes Contenido Pagina             */
+
+
+
+.colorGris{
+    color: #777;
 }
 
-.navbar-nav.sm-collapsible a.has-submenu {
-    padding-right: 50px;
+#tituloFormulario{
+font-size : 14pt;
+font-style: oblique;
+
 }
+
+#contenidoFormulario{
+height: 25em;
+font-size : 11pt;
+
+}
+
+
+
+
 /*----------------------------------------*/
+
+
+
