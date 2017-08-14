@@ -1,16 +1,17 @@
 @extends('template.biblioteca')
+@extends('template.menuBiblioteca')
+
+@section('tituloFormulario','Registro Usuarios')
 
 
-@section('nombreGrupo')
-Visión Catastral
-@endsection
+@section('contenidoFormulario')
 
 
-@section('menuPrincipal')
-<li><a href="#home">Inicio</a></li>
-<li><a href="#home">Inicio</a></li>
-<li><a href="#home">Inicio</a></li>
-<li><a href="#home">Inicio</a></li>
-<li><a href="#home">Inicio</a></li>
+{!! Form::open() !!}
+
+{!! Form::close() !!}
+
+
+
 
 @endsection
