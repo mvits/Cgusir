@@ -11,9 +11,9 @@
 |
  */
 
-Route::get('/', function () {
+Route::get('/', ['as' => 'principal', function () {
     return view('index');
-});
+}]);
 
 // Rutas Bilblioteca
 
