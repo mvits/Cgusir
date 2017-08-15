@@ -1,5 +1,8 @@
 <?php
 
+use App\Usuario;
+use Faker\Generator;
+
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -9,16 +12,34 @@
 | you a convenient way to create models for testing and seeding your
 | database. Just tell the factory how a default model should look.
 |
-*/
+ */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
+/* Ejemplo
 
-    return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+$factory->define(App\User::class, function (Faker\Generator $faker) {
+static $password;
+
+return [
+'name' => $faker->name,
+'email' => $faker->unique()->safeEmail,
+'password' => $password ?: $password = bcrypt('secret'),
+'remember_token' => str_random(10),
+];
+});
+
+ */
+
+$factory->define(Usuario::class, function (Generator $faker) {
+
+    $array = [
+        'numero_identificacion' => $faker->unique()->numberBetween(500000, 4000000000),
+        'nombre'                => $faker->name,
+        'codigo_estudiantil'    => $faker->unique()->numberBetween(20000000000, 20300000000),
+        'correo'                => $faker->unique()->email,
+        'password'              => bcrypt('stiv'),
     ];
+
+    return $array;
+
 });
