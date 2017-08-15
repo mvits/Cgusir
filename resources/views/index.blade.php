@@ -8,7 +8,7 @@ Visión Catastral
 <!-- Menu Aplicativo -->
 @section('menuPrincipal')
 	<li><a href="#contenido">Reseña Grupo</a></li>
-	<li><a href="{{ route('usuarios.create') }}">Biblioteca</a></li>
+	<li><a href="{{ route('usuarios.index') }}">Biblioteca</a></li>
 	<!-- <li><a href="#gallery">Gallery</a></li>-->
     <!--<li><a href="#team">Miembros Activos</a></li>-->
     <!--<li><a href="#testimonial">Precious Reviews</a></li>-->
