@@ -14,16 +14,13 @@
 
             <!-- Left nav -->
             <ul class="nav navbar-nav">
-	              <li><a href="#">Dropdown<span class="caret"></span></a>
+	              <li><a href="#">Administración<span class="caret"></span></a>
 	                <ul class="dropdown-menu">
-	                  <li><a href="#">Action</a></li>
-	                  <li><a href="#">Another action</a></li>
-	                  <li><a href="#">Something else here</a></li>
+	                  <li class="dropdown-header">Usuarios</li>
+	                  <li><a href="{{ route('usuarios.create') }}">Registro</a></li>
+	                  <li><a href="{{ route('usuarios.store') }}">Gestión</span></a></li>
 	                  <li class="divider"></li>
-	                  <li class="dropdown-header">Nav header</li>
-	                  <li><a href="#">Separated link</a></li>
-	                  <li><a href="#">One more separated link</span></a></li>
-	               </ul>
+	                </ul>
 	             </li> 
             </ul>
 

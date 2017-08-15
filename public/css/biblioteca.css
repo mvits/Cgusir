@@ -12,6 +12,16 @@ body {
 header {
 	width:100%;
 }
+
+.colorGris{
+    color: #777;
+}
+
+
+.centrado{
+  text-align: center;;
+}
+
 /*----------------------------------------*/
 
 /*             Estilos Menu             */
@@ -75,13 +85,8 @@ header {
 
 
 
-/*             Estilos Secciónes Contenido Pagina             */
+/*   Estilos Secciónes Contenido Pagina    */
 
-
-
-.colorGris{
-    color: #777;
-}
 
 #tituloFormulario{
 font-size : 14pt;
@@ -90,15 +95,18 @@ font-style: oblique;
 }
 
 #contenidoFormulario{
-height: 25em;
+/*height: 25em;*/
 font-size : 11pt;
 
 }
-
-
-
-
 /*----------------------------------------*/
 
 
+/*   Estilos Tablas   */
+
+th {
+text-align: center;
+vertical-align: middle;
+}
+/*----------------------------------------*/
 
