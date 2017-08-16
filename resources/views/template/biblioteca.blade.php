@@ -20,7 +20,10 @@
     <section id='cabecera' >
          @yield('menuPrincipalBiblioteca')
     </section>
-    <section id='contenido' >
+    <section id='mensaje'>
+        @include('flash::message')
+    </section>
+    <section id='contenido'>
         <div class="panel panel-default">
             <div id='tituloFormulario' class="panel-heading">
                 <h3 class="panel-title colorGris"><b>@yield('tituloFormulario')</b></h3>
@@ -34,5 +37,6 @@
     <!-- Script Menu Principal Biblioteca-->    
     <script src="{{ asset('plugins/smartmenus/jquery.smartmenus.min.js') }}"></script>
     <script src="{{ asset('plugins/smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js') }}"></script>
+    <script src="{{ asset('js/biblioteca.js') }}"></script>
 </body>
 </html>
