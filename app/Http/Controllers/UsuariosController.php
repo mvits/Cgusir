@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Usuario;
 use Illuminate\Http\Request;
+use Laracasts\Flash\Flash;
 
 class UsuariosController extends Controller
 {
@@ -12,7 +13,7 @@ class UsuariosController extends Controller
 
     public function index()
     {
-        $usuarios = Usuario::orderBy('id', 'ASC')->simplePaginate(6);
+        $usuarios = Usuario::orderBy('id', 'DESC')->simplePaginate(6);
         return view('biblioteca.admin.usuarios.index')->with('usuarios', $usuarios);
     }
 
@@ -26,7 +27,10 @@ class UsuariosController extends Controller
         $usuario           = new Usuario($request->all());
         $usuario->password = bcrypt($request->password);
         $usuario->save();
-        dd('Registro Exitoso');
+
+        Flash('Registro Exitoso<br>Usuario: <b>' . $usuario->numero_identificacion . ' - ' . $usuario->nombre . '</b>')->success();
+
+        return redirect()->route('usuarios.index');
     }
 
     public function show($id)
@@ -39,6 +43,14 @@ class UsuariosController extends Controller
     {}
 
     public function destroy($id)
-    {}
+    {
+
+        $usuario = Usuario::find($id);
+        $usuario->delete();
+
+        Flash('Se elimino de forma exitosa el usuario:<br><b>' . $usuario->numero_identificacion . ' - ' . $usuario->nombre . '</b>')->error();
+
+        return redirect()->route('usuarios.index');
+    }
 
 }

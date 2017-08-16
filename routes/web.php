@@ -20,5 +20,9 @@ Route::get('/', ['as' => 'principal', function () {
 Route::group(['prefix' => 'biblioteca/admin'], function () {
 
     Route::resource('usuarios', 'UsuariosController');
+    Route::get('usuarios/{id}/destroy', [
+        'uses' => 'UsuariosController@destroy',
+        'as'   => 'usuarios.destroy',
+    ]);
 
 });

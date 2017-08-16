@@ -21,7 +21,8 @@
 								<span class="glyphicon glyphicon-pencil">
 								</span>
 							</a>
-							<a href="#" class="btn btn-danger">
+							<a href="{{ route('usuarios.destroy',$usuario->id) }}"
+								onclick="return confirm('¿Seguro que desea ELIMINAR usuario?\n{{ $usuario->numero_identificacion }} -{{ $usuario->nombre }}')" class="btn btn-danger">
 								<span class="glyphicon glyphicon-remove-circle">
 								</span>
 							</a>
