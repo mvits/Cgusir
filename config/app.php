@@ -181,6 +181,7 @@ return [
          * Il mio providers
          */
         Collective\Html\HtmlServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
     ],
 
