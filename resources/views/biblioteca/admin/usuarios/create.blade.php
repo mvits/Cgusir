@@ -1,11 +1,12 @@
 @extends('template.biblioteca')
 @extends('template.menuBiblioteca')
+@extends('template.mensajeValidacionErrores')
 
 @section('tituloFormulario','Registro Usuario')
 
-
 @section('contenidoFormulario')
-
+	
+	
 	{!! Form::open(['route'=>'usuarios.store','method'=> 'POST']) !!}
 
 		<div class="form-group">
@@ -84,9 +85,6 @@
 				['class'=>'btn btn-default'])
 			 !!}
 		</div>
-
-
-
 
 	{!! Form::close() !!}
 

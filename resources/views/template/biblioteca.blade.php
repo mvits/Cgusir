@@ -28,7 +28,10 @@
             <div id='tituloFormulario' class="panel-heading">
                 <h3 class="panel-title colorGris"><b>@yield('tituloFormulario')</b></h3>
             </div>
-            <div id='contenidoFormulario' class="panel-body">@yield('contenidoFormulario')</div>
+            <div id='contenidoFormulario' class="panel-body">
+            @yield('mensajeErroresFormulario')
+            @yield('contenidoFormulario')
+            </div>
         </div>
     </section>
 
