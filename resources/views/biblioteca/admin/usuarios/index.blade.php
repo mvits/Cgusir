@@ -17,7 +17,7 @@
 				@foreach($usuarios as $usuario)
 					<tr>
 						<td class="centrado">
-							<a href="#" class="btn btn-info">
+							<a href="{{ route('usuarios.edit',$usuario->id) }}" class="btn btn-info">
 								<span class="glyphicon glyphicon-pencil">
 								</span>
 							</a>
