@@ -15,6 +15,10 @@ Route::get('/', ['as' => 'principal', function () {
     return view('index');
 }]);
 
+Route::get('/biblioteca/', ['as' => 'biblioteca', function () {
+    return view('biblioteca.index');
+}]);
+
 // Rutas Bilblioteca
 
 Route::group(['prefix' => 'biblioteca/admin'], function () {
@@ -23,6 +27,12 @@ Route::group(['prefix' => 'biblioteca/admin'], function () {
     Route::get('usuarios/{id}/destroy', [
         'uses' => 'UsuariosController@destroy',
         'as'   => 'usuarios.destroy',
+    ]);
+
+    Route::resource('autores', 'AutoresController');
+    Route::get('autores/{id}/destroy', [
+        'uses' => 'AutoresController@destroy',
+        'as'   => 'autores.destroy',
     ]);
 
 });
