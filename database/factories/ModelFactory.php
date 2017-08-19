@@ -1,5 +1,6 @@
 <?php
 
+use App\Autor;
 use App\Usuario;
 use Faker\Generator;
 
@@ -37,7 +38,18 @@ $factory->define(Usuario::class, function (Generator $faker) {
         'nombre'                => $faker->name,
         'codigo_estudiantil'    => $faker->unique()->numberBetween(20000000000, 20300000000),
         'correo'                => $faker->unique()->email,
-        'password'              => bcrypt('stiv'),
+        'password'              => bcrypt('Stiv48=@'),
+    ];
+
+    return $array;
+
+});
+
+$factory->define(Autor::class, function (Generator $faker) {
+
+    $array = [
+        'nombre'            => $faker->unique->name,
+        'link_bibliografia' => $faker->url,
     ];
 
     return $array;
