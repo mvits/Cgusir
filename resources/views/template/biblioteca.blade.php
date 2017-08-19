@@ -41,5 +41,6 @@
     <script src="{{ asset('plugins/smartmenus/jquery.smartmenus.min.js') }}"></script>
     <script src="{{ asset('plugins/smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js') }}"></script>
     <script src="{{ asset('js/biblioteca.js') }}"></script>
+    @yield('javascriptOpcional')
 </body>
 </html>
