@@ -1,4 +1,11 @@
 	
+	function ucword(str){
+		    str = str.toLowerCase().replace(/(^([a-zA-Z\p{M}]))|([ -][a-zA-Z\p{M}])/g, function(replace_latter) { 
+		        return replace_latter.toUpperCase();
+		    }); 
+    	return str; 
+	}
+
 	$("#nombre").blur(function(){
 
 		var nombre = $("#nombre").val();
@@ -9,13 +16,11 @@
 
 			nombre = nombre.toLowerCase();
 
-			nombre = nombre.toLowerCase().replace(/\b[a-z]/g, 
-					 function(letter) {
-    					return letter.toUpperCase();
-					  });
+			nombre = ucword(nombre);
 
 			console.log(nombre);
 
 			$("#nombre").val(nombre);
 
 	});
+
