@@ -16,6 +16,7 @@ class AddAutoresTable extends Migration
         Schema::create('autores', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre')->unique();
+            $table->text('link_bibliografia')->nullable();
             $table->timestamps();
         });
     }

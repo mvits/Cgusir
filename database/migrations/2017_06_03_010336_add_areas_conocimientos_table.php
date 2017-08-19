@@ -16,6 +16,7 @@ class AddAreasConocimientosTable extends Migration
         Schema::create('areas_conocimientos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre')->unique();
+            $table->text('descripcion')->nullable();
             $table->timestamps();
         });
     }

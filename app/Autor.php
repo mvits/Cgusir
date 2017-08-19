@@ -8,7 +8,7 @@ class Autor extends Model
 {
     protected $table = "autores";
 
-    protected $fillable = ["nombre"];
+    protected $fillable = ['nombre', 'link_bibliografia'];
 
     public function libros()
     {

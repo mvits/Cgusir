@@ -8,7 +8,7 @@ class AreaConocimiento extends Model
 {
     protected $table = 'areas_conocimientos';
 
-    protected $fillable = ['nombre'];
+    protected $fillable = ['nombre', 'descripcion'];
 
     public function libros()
     {
