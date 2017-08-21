@@ -45,6 +45,6 @@
 @endsection
 
 @section('javascriptOpcional')
-	{{ Html::script('js/autor.js') }}
+	{{ Html::script('js/estandarizacionNombre.js') }}
 @endsection
 

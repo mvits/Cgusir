@@ -36,11 +36,6 @@ class AutoresController extends Controller
 
     }
 
-    public function show($id)
-    {
-
-    }
-
     public function edit($id)
     {
         $autor = Autor::find($id);

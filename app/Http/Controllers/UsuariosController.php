@@ -32,9 +32,6 @@ class UsuariosController extends Controller
         return redirect()->route('usuarios.index');
     }
 
-    public function show($id)
-    {}
-
     public function edit($id)
     {
         $usuario = Usuario::find($id);
