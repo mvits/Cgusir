@@ -32,6 +32,14 @@ p{
 text-align: justify;
 }
 
+
+.modal-header{
+   font-size: 14pt;
+   font-style: oblique; 
+   color: #777;  
+}
+
+
 /*----------------------------------------*/
 
 /*             Estilos Menu             */
