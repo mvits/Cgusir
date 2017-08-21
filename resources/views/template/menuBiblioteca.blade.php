@@ -18,7 +18,7 @@
 	                <ul class="dropdown-menu">
 	                  <li class="dropdown-header">Usuarios</li>
 	                  <li><a href="{{ route('usuarios.create') }}">Registro</a></li>
-	                  <li><a href="{{ route('usuarios.store') }}">Gestión</span></a></li>
+	                  <li><a href="{{ route('usuarios.index') }}">Gestión</span></a></li>
 	                  <!-- <li class="divider"></li> -->
 	                </ul>
 	             </li> 
@@ -30,11 +30,11 @@
                   <ul class="dropdown-menu">
                     <li class="dropdown-header">Autores</li>
                     <li><a href="{{ route('autores.create') }}">Registro</a></li>
-                    <li><a href="{{ route('autores.store') }}">Gestión</span></a></li>
+                    <li><a href="{{ route('autores.index') }}">Gestión</span></a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header">Áreas Conocimiento</li>
-                    <li><a href="#">Registro</a></li>
-                    <li><a href="#">Gestión</span></a></li>
+                    <li><a href="{{ route('areasConocimiento.create') }}">Registro</a></li>
+                    <li><a href="{{ route('areasConocimiento.index') }}">Gestión</span></a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header">Recursos Bibliográficos</li>
                     <li><a href="#">Registro</a></li>
