@@ -35,4 +35,14 @@ Route::group(['prefix' => 'biblioteca/admin'], function () {
         'as'   => 'autores.destroy',
     ]);
 
+    Route::resource('areasConocimiento', 'AreasConocimientoController');
+    Route::get('areasConocimiento/{id}/destroy', [
+        'uses' => 'AreasConocimientoController@destroy',
+        'as'   => 'areasConocimiento.destroy',
+    ]);
+    Route::get('areasConocimiento/{id}/descripcion', [
+        'uses' => 'AreasConocimientoController@descripcion',
+        'as'   => 'areasConocimiento.descripcion',
+    ]);
+
 });
