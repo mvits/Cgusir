@@ -27,7 +27,7 @@ class AutorRequest extends FormRequest
         $autor = $this->route()->parameter('autore');
 
         return [
-            'nombre'            => 'required|unique:autores' . ((is_null($autor)) ? '' : ',nombre,' . $autor),
+            'nombre'            => 'required|min:4|unique:autores' . ((is_null($autor)) ? '' : ',nombre,' . $autor),
             'link_bibliografia' => 'url|nullable',
         ];
     }
