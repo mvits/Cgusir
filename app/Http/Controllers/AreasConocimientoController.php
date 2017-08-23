@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\AreaConocimiento;
-use Illuminate\Http\Request;
+use App\Http\Requests\AreaConocimientoRequest;
 use Laracasts\Flash\Flash;
 
 class AreasConocimientoController extends Controller
@@ -22,7 +22,7 @@ class AreasConocimientoController extends Controller
         return view('biblioteca.admin.areasConocimiento.create');
     }
 
-    public function store(Request $request)
+    public function store(AreaConocimientoRequest $request)
     {
 
         $area         = new AreaConocimiento($request->all());
@@ -39,10 +39,22 @@ class AreasConocimientoController extends Controller
     public function edit($id)
     {
 
+        $area = AreaConocimiento::find($id);
+
+        return view('biblioteca.admin.areasConocimiento.edit')->with('area', $area);
     }
 
-    public function update(Request $request, $id)
+    public function update(AreaConocimientoRequest $request, $id)
     {
+        $area              = AreaConocimiento::find($id);
+        $area->nombre      = $this->estandarizarNombre($request->nombre);
+        $area->descripcion = $request->descripcion;
+
+        $area->save();
+
+        Flash('Se actualizo de forma exitosa el área de conocimiento:<br><b>' . $area->nombre . '</b>')->warning();
+
+        return redirect()->route('areasConocimiento.index');
 
     }
 
