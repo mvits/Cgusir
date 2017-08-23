@@ -1,5 +1,6 @@
 <?php
 
+use App\AreaConocimiento;
 use App\Autor;
 use App\Usuario;
 use Faker\Generator;
@@ -50,6 +51,17 @@ $factory->define(Autor::class, function (Generator $faker) {
     $array = [
         'nombre'            => $faker->unique->name,
         'link_bibliografia' => $faker->url,
+    ];
+
+    return $array;
+
+});
+
+$factory->define(AreaConocimiento::class, function (Generator $faker) {
+
+    $array = [
+        'nombre'      => $faker->unique->word,
+        'descripcion' => $faker->realText(5000, 2),
     ];
 
     return $array;
