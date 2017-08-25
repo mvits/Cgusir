@@ -37,8 +37,8 @@
                     <li><a href="{{ route('areasConocimiento.index') }}">Gestión</span></a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header">Recursos Bibliográficos</li>
-                    <li><a href="#">Registro</a></li>
-                    <li><a href="#">Gestión</span></a></li>
+                    <li><a href="{{ route('libros.create') }}">Registro</a></li>
+                    <li><a href="{{ route('libros.index') }}">Gestión</span></a></li>
                   </ul>
                </li> 
             </ul>

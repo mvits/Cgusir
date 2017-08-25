@@ -5,6 +5,10 @@
 		    }); 
     	return str; 
 	}
+	
+	function upperFirst(string){
+	  return string.charAt(0).toUpperCase() + string.slice(1);
+	}
 
 	$("#nombre").blur(function(){
 
@@ -21,6 +25,24 @@
 			console.log(nombre);
 
 			$("#nombre").val(nombre);
+
+	});
+
+	$("#titulo").blur(function(){
+
+		var nombre = $("#titulo").val();
+
+			nombre = nombre.replace(/\s+/gi,' ');
+
+			nombre = nombre.trim();
+
+			nombre = nombre.toLowerCase();
+
+			nombre = upperFirst(nombre);
+
+			console.log(nombre);
+
+			$("#titulo").val(nombre);
 
 	});
 
