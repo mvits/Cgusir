@@ -23,18 +23,21 @@ Route::get('/biblioteca/', ['as' => 'biblioteca', function () {
 
 Route::group(['prefix' => 'biblioteca/admin'], function () {
 
+    #Rutas Usuarios
     Route::resource('usuarios', 'UsuariosController');
     Route::get('usuarios/{id}/destroy', [
         'uses' => 'UsuariosController@destroy',
         'as'   => 'usuarios.destroy',
     ]);
 
+    # Rutas Autores
     Route::resource('autores', 'AutoresController');
     Route::get('autores/{id}/destroy', [
         'uses' => 'AutoresController@destroy',
         'as'   => 'autores.destroy',
     ]);
 
+    # Rutas Áreas Conocimiento
     Route::resource('areasConocimiento', 'AreasConocimientoController');
     Route::get('areasConocimiento/{id}/destroy', [
         'uses' => 'AreasConocimientoController@destroy',
@@ -43,6 +46,13 @@ Route::group(['prefix' => 'biblioteca/admin'], function () {
     Route::get('areasConocimiento/{id}/descripcion', [
         'uses' => 'AreasConocimientoController@descripcion',
         'as'   => 'areasConocimiento.descripcion',
+    ]);
+
+    # Rutas Libros
+    Route::resource('libros', 'LibrosController');
+    Route::get('libros/{id}/destroy', [
+        'uses' => 'LibrosController@destroy',
+        'as'   => 'libros.destroy',
     ]);
 
 });
