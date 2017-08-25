@@ -8,16 +8,16 @@ class Libro extends Model
 {
     protected $table = 'libros';
 
-    protected $fillable = ['titulo', 'anio', 'tipo', 'isbn', 'numero_edicion'];
+    protected $fillable = ['titulo', 'anio', 'tipo', 'isbn', 'editorial', 'numero_edicion'];
 
     public function autores()
     {
-        return $this->belongsToMany('App\Autor')->withTimestamps();
+        return $this->belongsToMany('App\Autor', 'libro_autor', 'libro_id', 'autor_id')->withTimestamps();
     }
 
     public function areas()
     {
-        return $this->belongsToMany('App\AreaConocimiento')->withTimestamps();
+        return $this->belongsToMany('App\AreaConocimiento', 'libro_area', 'libro_id', 'area_id')->withTimestamps();
     }
     public function usuarios()
     {

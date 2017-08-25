@@ -18,8 +18,9 @@ class AddLibrosTable extends Migration
             $table->string('titulo');
             $table->integer('anio');
             $table->enum('tipo', ['libro', 'fotocopia']);
-            $table->string('isbn');
-            $table->integer('numero_edicion');
+            $table->string('isbn')->nullable();
+            $table->string('editorial')->nullable();
+            $table->integer('numero_edicion')->nullable();
             $table->enum('estado_prestamo', ['SI', 'NO'])->default('NO');
             $table->timestamps();
         });
