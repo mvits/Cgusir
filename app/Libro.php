@@ -24,4 +24,9 @@ class Libro extends Model
         return $this->belongsToMany('App\Usuario')->withTimestamps();
     }
 
+    public function scopeBusquedaRecursos($query, $titulo)
+    {
+        return $query->where('titulo', 'ILIKE', "%$titulo%");
+    }
+
 }
