@@ -4,7 +4,29 @@
 @section('tituloFormulario','Lista de Recursos Bibliográficos')
 
 @section('contenidoFormulario')
-	
+
+	<!-- Buscador Recursos -->
+		{!! Form::open([
+				'route' => 'libros.index',
+				'method' => 'GET',
+				'class' => 'navbar-form pull-right'
+			])!!}
+
+				<dir class="input-group">
+					{!! Form::text('titulo', null,
+						['class' => 'form-control',
+						 'placeholder' => 'Buscar Recursos',
+						 'aria-describedby' => 'buscar'
+						 ]) !!}
+				 	<span class="input-group-addon" id='buscar'>
+						<span type='submit' class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				 	</span> 
+				</dir>
+		{!! Form::close() !!}	
+	<!-- End Buscador Recursos -->
+	<br>
+	<br>
+	<hr>
 	<div class="table-responsive">
 		<table class="table table-hover table-striped table-bordered">
 			<thead> 
@@ -23,23 +45,23 @@
 								</span>
 							</a>
 							<a href="{{ route('libros.destroy',$libro->id) }}"
-								onclick="return confirm('¿Seguro que desea ELIMINAR usuario?\n{{ $libro->numero_identificacion }} -{{ $libro->nombre }}')" class="btn btn-danger">
+								onclick="return confirm('¿Seguro que desea ELIMINAR recurso biliográfico?\n{{ $libro->titulo }}')" class="btn btn-danger">
 								<span class="glyphicon glyphicon-remove-circle">
 								</span>
 							</a>
 						</td>
+						<td class="centrado">{{ $libro->estado_prestamo }}</td>
 						<td>{{ $libro->titulo }}</td>
-						<td>{{ $libro->nombre }}</td>
 						<td>
-							@if($libro->tipo == 'administradorGeneral')
-								<span class="label label-success">Administrador General</span>
-							@elseif($libro->tipo == 'administrador')
-								<span class="label label-primary">Administrador</span>
-							@else
-								<span class="label label-default">Estudiante</span>
-							@endif
+							@foreach($libro->autores as $autor)
+								{{ $autor->nombre }}<br>
+							@endforeach
 						</td>
-						
+						<td>
+							@foreach($libro->areas as $area)
+								<span class="label label-info">{{ $area->nombre }}</span><br>
+							@endforeach
+						</td>
 					</tr>
 				@endforeach
 			</tbody>
